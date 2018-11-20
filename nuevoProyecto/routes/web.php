@@ -69,3 +69,11 @@ Route::get('/pelicula/{titulo}', function ($titulo){
   }
 
 });
+
+Route::get('/peliculas/{id}','PeliculasController@buscarPeliculasId');
+
+Route::get('/peliculas/buscar/{nombre}', 'PeliculasController@buscarPeliculaNombre');
+
+Route::get('/peliculas', function(){
+  return view('peliculas');
+});
